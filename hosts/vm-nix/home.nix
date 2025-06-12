@@ -7,6 +7,7 @@
       ../../home/shell.nix
       ../../home/git.nix
       ../../home/development.nix
+      ../../home/desktop
   ];
 
   # This value determines the home Manager release that your
@@ -22,3 +23,4 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
+

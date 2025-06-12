@@ -5,13 +5,18 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ./users.nix ../../nixos/common.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./users.nix
+    ../../nixos/common.nix
+    ../../nixos/desktop
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.timeout = 2;
+  boot.loader.grub.useOSProber = false;
+  boot.loader.timeout = 1;
 
   networking.hostName = "cloud-nix"; # Define your hostname.
 
