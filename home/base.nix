@@ -1,6 +1,6 @@
 # TODO: move this configuration to home-manager
-{ pkgs, host-config, ... }: {
-  users.users."${host-config.username}".packages = with pkgs; [
+{ config, pkgs, ... }: {
+  home.packages = with pkgs; [
     gnumake
     gcc
     fzf
@@ -18,10 +18,17 @@
     pass
     jq
     ripgrep
-    tmux
     stow
     eza
     htop
+    home-manager
+    tmux # required for allowing using my own config
   ];
+
+  # TODO: Move to tmux configuration
+  # programs.tmux = { enable = true; };
+  home.file.".config/tmux/tmux.conf" = {
+    source = ./dotfiles/tmux/.config/tmux/tmux.conf;
+  };
 }
 

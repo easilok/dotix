@@ -5,8 +5,8 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "video" "dialout" ];
   };
 
-  imports = [
-    ../../home/base.nix
-    ../../home/development.nix
-  ];
+  # imports = [
+  #   ../../home/base.nix
+  #   ../../home/development.nix
+  # ];
 }
