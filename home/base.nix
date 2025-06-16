@@ -1,10 +1,6 @@
 # TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
   home.packages = with pkgs; [
-    gnumake
-    gcc
-    fzf
-    pinentry
     # file mgmt
     unzip
     zip
