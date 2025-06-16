@@ -15,16 +15,25 @@
     jq
     ripgrep
     stow
-    eza
     htop
-    home-manager
     tmux # required for allowing using my own config
+    lf
   ];
+
+  imports = [ ./shell.nix ./git.nix];
 
   # TODO: Move to tmux configuration
   # programs.tmux = { enable = true; };
   home.file.".config/tmux/tmux.conf" = {
     source = ./dotfiles/tmux/.config/tmux/tmux.conf;
   };
+
+  home.sessionPath = [ "$HOME/.local/bin" ];
+
+  home.file.".local/bin" = {
+    source = ./dotfiles/bin/.local/bin;
+    recursive = true;
+  };
+
 }
 
