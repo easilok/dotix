@@ -1,11 +1,6 @@
 # TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
-  home.packages = with pkgs; [
-    starship
-    zoxide
-    zsh
-    mise
-  ];
+  home.packages = with pkgs; [ starship zsh mise ];
 
   imports = [ ./neovim.nix ];
 
