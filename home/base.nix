@@ -20,8 +20,6 @@
     lf
   ];
 
-  imports = [ ./shell.nix ./git.nix];
-
   # TODO: Move to tmux configuration
   # programs.tmux = { enable = true; };
   home.file.".config/tmux/tmux.conf" = {

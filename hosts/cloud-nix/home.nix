@@ -2,7 +2,12 @@
   home.username = "luis";
   home.homeDirectory = "/home/luis";
 
-  imports = [ ../../home/base.nix ../../home/development.nix ];
+  imports = [ 
+      ../../home/base.nix 
+      ../../home/shell.nix 
+      ../../home/git.nix 
+      ../../home/development.nix
+  ];
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
