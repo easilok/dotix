@@ -107,7 +107,7 @@
 
     includes = [{
       condition = "gitdir:~/projects/work/";
-      path = "~/.config/git/config-work";
+      path = "~/projects/work/.config/git/config";
     }];
   };
 
