@@ -3,13 +3,13 @@
 all: rebuild
 
 update:
-        nix flake update
+	nix flake update
 
 rebuild:
-        sudo nixos-rebuild switch --flake .#
+	sudo nixos-rebuild switch --flake .#
 
 home:
-        home-manager switch --flake .#$(shell hostname)
+	home-manager switch --flake .#$(shell hostname)
 
 clean:
-        sudo nix-collect-garbage --delete-older-than 7d
+	sudo nix-collect-garbage --delete-older-than 7d
