@@ -11,7 +11,15 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      specialArgs = { host-config = { username = "luis"; }; };
+      specialArgs = {  username = "luis"; host-config = { username = "luis"; }; };
+
+      # Used in standalone home manager
+      pkgs = import nixpkgs
+      {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
     in {
 
       nixosConfigurations.cloud-nix = nixpkgs.lib.nixosSystem {
@@ -29,6 +37,14 @@
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
         ];
+      };
+
+      homeConfigurations.luis-addvolt-dell = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          modules = [
+              ./hosts/luis-addvolt-dell/home.nix
+          ];
       };
     };
 }
