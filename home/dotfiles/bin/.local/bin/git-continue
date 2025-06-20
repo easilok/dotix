@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Continue a rebase or cherry-pick in the event of conflicts.
 
