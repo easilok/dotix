@@ -11,11 +11,13 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      specialArgs = {  username = "luis"; host-config = { username = "luis"; }; };
+      specialArgs = {
+        username = "luis";
+        host-config = { username = "luis"; };
+      };
 
       # Used in standalone home manager
-      pkgs = import nixpkgs
-      {
+      pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
@@ -39,12 +41,11 @@
         ];
       };
 
-      homeConfigurations.luis-addvolt-dell = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.luis-addvolt-dell =
+        home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
-          modules = [
-              ./hosts/luis-addvolt-dell/home.nix
-          ];
-      };
+          modules = [ ./hosts/luis-addvolt-dell/home.nix ];
+        };
     };
 }
