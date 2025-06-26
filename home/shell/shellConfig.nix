@@ -2,6 +2,7 @@
   shellAliases = {
     # General Alias
     gpg-agent-update = "gpg-connect-agent updatestartuptty /bye > /dev/null";
+    "v" = "nvim";
     "vi" = "vim";
     "vs" = "nvim +Sassy";
     # info
