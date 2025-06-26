@@ -1,4 +1,4 @@
-.PHONY: all home update rebuild clean
+.PHONY: all home update rebuild clean gc
 
 all: rebuild
 
@@ -12,4 +12,6 @@ home:
 	home-manager switch --flake .#$(shell hostname)
 
 clean:
-	sudo nix-collect-garbage --delete-older-than 7d
+	sudo nix-collect-garbage --delete-older-than 30d
+
+gc: clean
