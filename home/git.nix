@@ -134,6 +134,7 @@
     .nvimrc
     Sess*.vim
     proj_notes.md
+    .aider*
   '';
 
 }
