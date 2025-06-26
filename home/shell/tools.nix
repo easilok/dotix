@@ -13,7 +13,7 @@
 
   programs.starship = {
     enable = true;
-    enableBashIntegration = config.programs.bash.enable;
+    enableBashIntegration = false;
     enableZshIntegration = config.programs.zsh.enable;
     settings = {
       aws = { disabled = true; };
