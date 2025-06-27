@@ -41,11 +41,22 @@
         ];
       };
 
-      homeConfigurations.luis-addvolt-dell =
-        home-manager.lib.homeManagerConfiguration {
+      nixosConfigurations.vm-nix = nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
+        modules = [
+          ./hosts/vm-nix/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.users.luis = import ./hosts/vm-nix/home.nix;
+            home-manager.backupFileExtension = ".nix-bak";
+          }
+        ];
+      };
+
+      homeConfigurations.luis-addvolt-dell = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           modules = [ ./hosts/luis-addvolt-dell/home.nix ];
-        };
-    };
+      };
+      };
 }
