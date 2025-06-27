@@ -4,6 +4,9 @@
     flameshot
     haskellPackages.greenclip
     lxappearance
+    xorg.xev
+    xorg.xmodmap
+    nextcloud-client
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];
