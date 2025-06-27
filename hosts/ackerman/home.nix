@@ -1,14 +1,25 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   home.username = "luis";
   home.homeDirectory = "/home/luis";
 
   imports = [
-      ../../home/base.nix
-      ../../home/shell
-      ../../home/git.nix
-      ../../home/development.nix
-      ../../home/desktop
+    ../../home/base.nix
+    ../../home/shell
+    ../../home/git.nix
+    ../../home/development.nix
+    ../../home/desktop
   ];
+
+  home.file.".Xmodmap" = {
+    text = ''
+      clear lock
+      keycode  21 = less greater less greater guillemotleft guillemotright guillemotleft
+      keycode  66 = Escape Escape Escape Escape
+      keysym XF86Back = Home
+      keysym XF86Forward = End
+    '';
+  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -23,4 +34,3 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
-

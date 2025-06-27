@@ -5,22 +5,21 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
+  imports = [
+    ./hardware-configuration.nix
     ./users.nix
     ../../nixos/common.nix
     ../../nixos/desktop
-    ];
+  ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = false; 
+  boot.loader.systemd-boot.enable = false;
   boot.loader.grub = {
-	enable = true;
-	device = "nodev";
-	efiSupport = true;
-	useOSProber = true;
-	default = 2;
+    enable = true;
+    device = "nodev";
+    efiSupport = true;
+    useOSProber = true;
+    default = 2;
   };
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
@@ -38,12 +37,12 @@
   services.printing.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
-   programs.gnupg.agent = {
-     enable = true;
-     enableSSHSupport = true;
-   };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
