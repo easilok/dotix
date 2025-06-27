@@ -25,5 +25,12 @@
     "$HOME/.local/share/flatpak/exports/share"
   ];
 
+  programs.wezterm = {
+    enable = true;
+    extraConfig = builtins.readFile ../dotfiles/wezterm/.config/wezterm/wezterm.lua;
+    # enableBashIntegration = config.programs.bash.enable;
+    # enableZshIntegration = config.programs.zsh.enable;
+  };
+
 }
 
