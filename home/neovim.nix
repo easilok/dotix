@@ -19,6 +19,7 @@ in {
     libuv
     lua-language-server
     nixd
+    nixfmt-rfc-style
     nodejs_22
   ];
 
