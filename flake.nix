@@ -53,6 +53,18 @@
         ];
       };
 
+      nixosConfigurations.ackerman = nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
+        modules = [
+          ./hosts/ackerman/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.users.luis = import ./hosts/ackerman/home.nix;
+            home-manager.backupFileExtension = ".nix-bak";
+          }
+        ];
+      };
+
       homeConfigurations.luis-addvolt-dell = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
