@@ -6,7 +6,7 @@
     lxappearance
   ];
 
-  imports = [ ./fonts.nix ./rofi.nix ./window-manager.nix ];
+  imports = [ ./fonts.nix ./rofi.nix ./window-manager.nix ./multimedia.nix];
 
   systemd.user.services.greenclip = {
 
