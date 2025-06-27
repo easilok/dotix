@@ -1,7 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   home.packages = with pkgs; [
     arandr
     nm-tray
+    picom
   ];
 
   xsession.windowManager = {
@@ -16,13 +18,30 @@
         };
       };
     };
-    awesome = { enable = true; };
+    awesome = {
+      enable = true;
+    };
   };
 
   # home.file.".config/awesome" = {
   #   source = ./dotfiles/awesome/.config/awesome;
   #   recursive = true;
   # };
+
+  home.file = {
+    ".local/bin/awesomewm-autorun.sh" = {
+      source = ./bin/awesomewm-autorun.sh;
+      executable = true;
+    };
+    ".local/bin/i3lock-clock-image" = {
+      source = ./bin/i3lock-clock-image;
+      executable = true;
+    };
+    ".local/bin/i3lock-clock" = {
+      source = ./bin/i3lock-clock;
+      executable = true;
+    };
+  };
 
   services.sxhkd = {
     enable = true;
@@ -60,16 +79,11 @@
       "shift + alt + F7" = "brightnessctl set 5%+";
       # Multimedia
       #TODO add microphone mute
-      "XF86AudioMicMute" =
-        "wpctl set-mute @DEFAULT_SINK@ toggle";
-      "XF86AudioRaiseVolume" =
-        "wpctl set-volume @DEFAULT_SINK@ 5%+";
-      "shift + XF86AudioRaiseVolume" =
-        "wpctl set-volume @DEFAULT_SINK@ 15%+";
-      "XF86AudioLowerVolume" =
-        "wpctl set-volume @DEFAULT_SINK@ 5%-";
-      "shift + XF86AudioLowerVolume" =
-        "wpctl set-volume @DEFAULT_SINK@ 15%-";
+      "XF86AudioMicMute" = "wpctl set-mute @DEFAULT_SINK@ toggle";
+      "XF86AudioRaiseVolume" = "wpctl set-volume @DEFAULT_SINK@ 5%+";
+      "shift + XF86AudioRaiseVolume" = "wpctl set-volume @DEFAULT_SINK@ 15%+";
+      "XF86AudioLowerVolume" = "wpctl set-volume @DEFAULT_SINK@ 5%-";
+      "shift + XF86AudioLowerVolume" = "wpctl set-volume @DEFAULT_SINK@ 15%-";
       "XF86AudioMute" = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
       "XF86AudioPlay" = "playerctl play-pause";
       "XF86Audio{Prev,Next}" = "playerctl {previous,next}";
