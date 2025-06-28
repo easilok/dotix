@@ -6,6 +6,7 @@
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -14,6 +15,8 @@
       specialArgs = {
         username = "luis";
         host-config = { username = "luis"; };
+
+        inherit system inputs;
       };
 
       # Used in standalone home manager

@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ./users.nix
+    ../common/thinkpad-t420
     ../../nixos/common.nix
     ../../nixos/desktop
   ];
@@ -35,9 +36,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
 
   programs.gnupg.agent = {
     enable = true;
