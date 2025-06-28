@@ -79,12 +79,12 @@
       "shift + alt + F7" = "brightnessctl set 5%+";
       # Multimedia
       #TODO add microphone mute
-      "XF86AudioMicMute" = "wpctl set-mute @DEFAULT_SINK@ toggle";
+      "XF86AudioMicMute" = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
       "XF86AudioRaiseVolume" = "wpctl set-volume @DEFAULT_SINK@ 5%+";
       "shift + XF86AudioRaiseVolume" = "wpctl set-volume @DEFAULT_SINK@ 15%+";
       "XF86AudioLowerVolume" = "wpctl set-volume @DEFAULT_SINK@ 5%-";
       "shift + XF86AudioLowerVolume" = "wpctl set-volume @DEFAULT_SINK@ 15%-";
-      "XF86AudioMute" = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
+      "XF86AudioMute" = "wpctl set-mute @DEFAULT_SINK@ toggle";
       "XF86AudioPlay" = "playerctl play-pause";
       "XF86Audio{Prev,Next}" = "playerctl {previous,next}";
       "super + {F12, F10, F11}" = "playerctl {play-pause,previous,next}";
