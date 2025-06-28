@@ -91,4 +91,22 @@
     };
   };
 
+  services.xsettingsd = {
+    enable = true;
+    settings = {
+      "Net/ThemeName" = "Arc-Dark";
+      "Net/IconThemeName" = "Adwaita";
+      "Gtk/DecorationLayout" = "menu:minimize,maximize,close";
+      # "Gtk/FontName" = "Ubuntu Regular 10";
+      "Gtk/MonospaceFontName" = "Source Code Pro 10";
+      #"Gtk/CursorThemeName"= "DMZ-White";
+      "Xft/Hinting" = 1;
+      "Xft/HintStyle" = "hintslight";
+      "Xft/Antialias" = 1;
+      "Xft/RGBA" = "rgb";
+      # Xft/DPI 90000 ;
+      #Xft/DPI 105000 ;
+    };
+  };
+
 }
