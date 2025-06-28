@@ -7,6 +7,9 @@
     xorg.xev
     xorg.xmodmap
     nextcloud-client
+    xarchiver
+    arc-theme
+    pcmanfm
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];
