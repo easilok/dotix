@@ -68,6 +68,13 @@
     "volume-down" =
       "cat $HOME/.config/sxhkd/sxhkdrc | grep -A1 -m 1 XF86AudioLowerVolume | grep -v XF86AudioLowerVolume | sh";
 
+    # Taskwarrior
+    "t" = "task";
+    "work" = "task context work && task";
+    "p" = "task context personal && task";
+    "tt" = "work today";
+    "day-progress" = "task end.after:yesterday completed";
+
   };
 
   sessionVariables = {

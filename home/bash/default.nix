@@ -16,7 +16,7 @@ in {
 
       source $HOME/.nix-profile/share/git/contrib/completion/git-prompt.sh
 
-      export PS1="\[\e[38;5;39m\]\u\[\e[38;5;81m\]@\[\e[38;5;77m\]\h \[\e[38;5;195m\]\w \[\e[38;5;220m\]\$(__git_ps1)\n\[\e[38;5;141m\]$ \[\033[0m\]"
+      export PS1="\[\e[38;5;39m\]\u\[\e[38;5;81m\]@\[\e[38;5;77m\]\h \[\e[38;5;195m\]\w\[\e[38;5;220m\]\$(__git_ps1)\n\[\e[38;5;141m\]$ \[\033[0m\]"
     '';
 
     sessionVariables = shellConfig.sessionVariables;
