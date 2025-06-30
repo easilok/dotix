@@ -7,6 +7,7 @@
     ../../home/shell
     ../../home/git.nix
     ../../home/development.nix
+    ../../home/containerization
   ];
 
   # This value determines the home Manager release that your
