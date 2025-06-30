@@ -11,6 +11,7 @@
     ../common/thinkpad-t420
     ../../nixos/common.nix
     ../../nixos/desktop
+    ../../nixos/virtualization
   ];
 
   # Bootloader.
