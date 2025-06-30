@@ -15,12 +15,14 @@ in {
   home.packages = with pkgs; [
     neovim
     tree-sitter
-    parinfer-rust
     libuv
-    lua-language-server
+    nodejs_22
+    # lsp and formatters
     nixd
     nixfmt-rfc-style
-    nodejs_22
+    parinfer-rust
+    lua-language-server
+    pyright
   ];
 
   # home.file.neovim-config= {
