@@ -3,6 +3,7 @@
     # General Alias
     gpg-agent-update = "gpg-connect-agent updatestartuptty /bye > /dev/null";
     "v" = "nvim";
+    "vim" = "nvim";
     "vi" = "vim";
     "vs" = "nvim +Sassy";
     # info

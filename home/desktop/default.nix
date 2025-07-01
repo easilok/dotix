@@ -10,6 +10,7 @@
     xarchiver
     arc-theme
     pcmanfm
+    libreoffice
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];
