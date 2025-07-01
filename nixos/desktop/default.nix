@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
+  imports = [ ./keyring.nix ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -9,7 +11,9 @@
 
   # Enabling i3
   services.xserver.windowManager.i3.enable = true;
-  security.pam.services = { i3lock-color.enable = true; };
+  security.pam.services = {
+    i3lock-color.enable = true;
+  };
 
   # Enabling awesome
   services.xserver.windowManager.awesome.enable = true;

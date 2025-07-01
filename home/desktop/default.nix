@@ -38,5 +38,8 @@
     # enableZshIntegration = config.programs.zsh.enable;
   };
 
+    services.gnome-keyring = {
+        enable = true;
+    };
 }
 
