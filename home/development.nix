@@ -1,6 +1,6 @@
 # TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
-  home.packages = with pkgs; [ mise taskwarrior3 ];
+  home.packages = with pkgs; [ taskwarrior3 ];
 
   programs.mise = {
     enable = true;
