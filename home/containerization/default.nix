@@ -6,5 +6,7 @@
     podman-tui
     # docker-compose
     podman-compose
+    distrobox
+    distrobox-tui
   ];
 }
