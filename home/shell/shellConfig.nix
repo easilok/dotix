@@ -18,6 +18,7 @@
     "fgrep" = "fgrep --color=auto";
     "egrep" = "egrep --color=auto";
     "rgrep" = "rgrep --color=auto";
+    "mk" = "() { mkdir -p $1 && cd $1 }";
 
     # listing directories
     # "ls" = "ls --color=auto"; # detailed list, show hidden
