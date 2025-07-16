@@ -18,11 +18,13 @@ run nm-applet
 # run xsettingsd
 run sxhkd
 # If there's a personal Xmodmap setup, use it
-[[ -f "$HOME/.Xmodmap" ]] && xmodmap ~/.Xmodmap
+[[ -f "$HOME/.Xmodmap" ]] && xmodmap $HOME/.Xmodmap
 
 # XDG
 # run blueman-applet
 # run system-config-printer-applet
+
+# run gnome-keyring-daemon --start
 
 run picom
 

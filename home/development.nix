@@ -1,6 +1,6 @@
 # TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
-  home.packages = with pkgs; [ taskwarrior3 ];
+  home.packages = with pkgs; [ taskwarrior3 kanata ];
 
   programs.mise = {
     enable = true;
