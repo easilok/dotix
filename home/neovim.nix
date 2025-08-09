@@ -23,6 +23,9 @@ in {
     parinfer-rust
     lua-language-server
     pyright
+    fennel
+    fennel-ls
+    fnlfmt
   ];
 
   # home.file.neovim-config= {
