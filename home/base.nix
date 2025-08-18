@@ -1,4 +1,3 @@
-# TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
   home.packages = with pkgs; [
     # file mgmt

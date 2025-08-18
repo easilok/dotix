@@ -4,6 +4,7 @@
 
   imports = [
     ../../home/base.nix
+    ../../home/cli-extra.nix
     ../../home/zsh
     ../../home/shell/tools.nix
     ../../home/git.nix
