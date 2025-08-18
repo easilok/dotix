@@ -2,10 +2,11 @@
   shellAliases = {
     # General Alias
     gpg-agent-update = "gpg-connect-agent updatestartuptty /bye > /dev/null";
-    "v" = "nvim";
+    "v" = "nvim +GoToFile";
     "vim" = "nvim";
     "vi" = "vim";
     "vs" = "nvim +Sassy";
+    "vob" = "nvim +ObsidianQuick";
     # info
     "battery" = "acpi -V | sed -n -e 1p -e 4p";
     "a" = "alias";
@@ -82,7 +83,7 @@
   sessionVariables = {
 
     EDITOR = "vim";
-    TERMINAL = "wezterm";
+    TERMINAL = "kitty";
 
     _JAVA_AWT_WM_NONREPARENTING = 1;
 

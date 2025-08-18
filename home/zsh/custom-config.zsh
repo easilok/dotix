@@ -52,4 +52,5 @@ bindkey '\e[3~' delete-char
 bindkey '^[[P' delete-char
 bindkey '\e[6~' end-of-history
 bindkey '\e[2~' redisplay
-
+# Custom bindings
+bindkey -s "^f" "tmux-smug\n"
