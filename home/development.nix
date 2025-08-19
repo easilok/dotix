@@ -1,6 +1,6 @@
 # TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
-  home.packages = with pkgs; [ taskwarrior3 timewarrior kanata ];
+  home.packages = with pkgs; [ taskwarrior3 timewarrior timetagger_cli kanata ];
 
   programs.mise = {
     enable = true;
