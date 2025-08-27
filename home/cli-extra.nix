@@ -3,6 +3,7 @@
     w3m
     weechat
     babashka
+    gum
   ];
 }
 
