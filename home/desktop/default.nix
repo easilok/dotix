@@ -1,6 +1,8 @@
 { config, pkgs, ... }: {
   home.packages = with pkgs; [
     wezterm
+    kitty
+    ghostty
     flameshot
     haskellPackages.greenclip
     lxappearance
@@ -11,6 +13,9 @@
     arc-theme
     pcmanfm
     libreoffice
+    zathura
+    evince
+    speedcrunch
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];
