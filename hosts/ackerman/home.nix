@@ -12,6 +12,10 @@
     ../../home/desktop
   ];
 
+  home.packages = with pkgs; [
+    devede
+  ];
+
   home.file.".Xmodmap" = {
     text = ''
       clear lock
