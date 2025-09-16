@@ -11,6 +11,8 @@
     ../../home/development.nix
   ];
 
+  home.packages = with pkgs; [ aider-chat-full gajim ];
+
   # programs.rofi = {
   #   enable = true;
   #   plugins = [ pkgs.rofi-emoji ];
