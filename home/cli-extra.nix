@@ -4,6 +4,8 @@
     weechat
     babashka
     gum
+    parallel
+    profanity
   ];
 }
 
