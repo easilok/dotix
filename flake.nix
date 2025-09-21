@@ -68,6 +68,18 @@
         ];
       };
 
+      nixosConfigurations.usopp = nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
+        modules = [
+          ./hosts/usopp/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.users.luis = import ./hosts/usopp/home.nix;
+            home-manager.backupFileExtension = ".nix-bak";
+          }
+        ];
+      };
+
       homeConfigurations.luis-addvolt-dell = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
