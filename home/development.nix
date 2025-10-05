@@ -1,6 +1,6 @@
 # TODO: move this configuration to home-manager
 { config, pkgs, ... }: {
-  home.packages = with pkgs; [ rlwrap taskwarrior3 timewarrior timetagger_cli kanata emacs];
+  home.packages = with pkgs; [ rlwrap taskwarrior3 timewarrior timetagger_cli kanata ];
 
   programs.mise = {
     enable = true;
@@ -8,7 +8,7 @@
     enableZshIntegration = config.programs.zsh.enable;
   };
 
-  imports = [ ./neovim.nix ];
+  imports = [ ./neovim.nix ./emacs.nix ];
 
 }
 
