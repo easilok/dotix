@@ -13,10 +13,12 @@
     pass
     jq
     ripgrep
+    fd
     stow
     htop
     tmux # required for allowing using my own config
     lf
+    inetutils
   ];
 
   # TODO: Move to tmux configuration
