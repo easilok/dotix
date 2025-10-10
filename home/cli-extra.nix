@@ -6,6 +6,7 @@
     gum
     parallel
     profanity
+    restic
   ];
 }
 
