@@ -9,6 +9,7 @@
     ../../home/shell
     ../../home/git.nix
     ../../home/development.nix
+    ../../home/development-extra.nix
     ../../home/desktop
   ];
 
