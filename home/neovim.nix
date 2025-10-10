@@ -23,6 +23,7 @@ in {
     parinfer-rust
     lua-language-server
     pyright
+    basedpyright
     fennel
     fennel-ls
     fnlfmt
