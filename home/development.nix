@@ -8,7 +8,7 @@
     enableZshIntegration = config.programs.zsh.enable;
   };
 
-  imports = [ ./neovim.nix ];
+  imports = [ ./neovim.nix ./lsp.nix];
 
 }
 

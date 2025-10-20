@@ -17,16 +17,6 @@ in {
     tree-sitter
     libuv
     nodejs_22
-    # lsp and formatters
-    nixd
-    nixfmt-rfc-style
-    parinfer-rust
-    lua-language-server
-    pyright
-    basedpyright
-    fennel
-    fennel-ls
-    fnlfmt
   ];
 
   # home.file.neovim-config= {
