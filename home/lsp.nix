@@ -7,7 +7,7 @@
     parinfer-rust
     lua-language-server
     pyright
-    # basedpyright
+    basedpyright
     fennel
     fennel-ls
     fnlfmt
