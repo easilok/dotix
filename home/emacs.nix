@@ -5,6 +5,7 @@
     emacs
     cmake
     libtool
+    ispell
   ];
 }
 

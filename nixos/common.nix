@@ -26,7 +26,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Global packages
-  environment.systemPackages = with pkgs; [ wget vim git gnumake gcc pinentry ];
+  environment.systemPackages = with pkgs; [ wget vim git gnumake gcc pinentry pinentry-emacs ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
