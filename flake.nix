@@ -62,6 +62,7 @@
           ./hosts/ackerman/configuration.nix
           home-manager.nixosModules.home-manager
           {
+            home-manager.useGlobalPkgs = true;
             home-manager.users.luis = import ./hosts/ackerman/home.nix;
             home-manager.backupFileExtension = ".nix-bak";
           }

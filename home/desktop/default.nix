@@ -16,6 +16,7 @@
     zathura
     evince
     speedcrunch
+    wireguard-tools
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];

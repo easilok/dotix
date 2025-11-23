@@ -7,6 +7,7 @@
     findutils
     gzip
     pbzip2 # multi core replacement for bzip2/bunzip2
+    rar
     diffutils
     # console tools
     bc # calculator

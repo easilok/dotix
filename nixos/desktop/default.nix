@@ -18,6 +18,9 @@
   # Enabling awesome
   services.xserver.windowManager.awesome.enable = true;
 
+  # Enabling stumpwm
+  services.xserver.windowManager.stumpwm.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pt";
