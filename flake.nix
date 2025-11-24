@@ -86,5 +86,10 @@
 
           modules = [ ./hosts/luis-addvolt-dell/home.nix ];
       };
+      homeConfigurations.work-dell = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          modules = [ ./hosts/work-dell/home.nix ];
       };
+    };
 }

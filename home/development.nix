@@ -2,12 +2,14 @@
 {
   home.packages = with pkgs; [
     rlwrap
+    sbcl
     taskwarrior3
     timewarrior
     timetagger_cli
     kanata
-    sbcl
     go
+    smug
+    gh
   ];
 
   programs.mise = {

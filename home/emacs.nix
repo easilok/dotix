@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     emacs
+    makeinfo
     cmake
     libtool
     ispell

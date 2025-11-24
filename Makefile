@@ -11,6 +11,9 @@ rebuild:
 home:
 	home-manager switch --flake .#$(shell hostname)
 
+home-work:
+	home-manager switch --flake .#work-dell
+
 home-clean:
 	nix-collect-garbage --delete-older-than 30d
 
