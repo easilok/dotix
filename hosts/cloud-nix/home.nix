@@ -10,6 +10,7 @@
     ../../home/development.nix
     ../../home/development-extra.nix
     ../../home/containerization
+    ../../home/gpg.nix
   ];
 
   # This value determines the home Manager release that your

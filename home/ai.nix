@@ -1,8 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
+
   home.packages = with pkgs; [
+    opencode
     claude-code
     codex
   ];
 }
-
-

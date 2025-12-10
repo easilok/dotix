@@ -7,6 +7,7 @@
     cmake
     libtool
     ispell
+    emacsPackages.mu4e
   ];
 }
 

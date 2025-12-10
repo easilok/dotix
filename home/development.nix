@@ -21,6 +21,7 @@
   imports = [
     ./neovim.nix
     ./lsp.nix
+    ./ai.nix
   ];
 
 }
