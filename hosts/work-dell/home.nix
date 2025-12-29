@@ -9,6 +9,7 @@
     ../../home/shell/tools.nix
     ../../home/git.nix
     ../../home/development.nix
+    ../../home/ai.nix
   ];
 
   home.packages = with pkgs; [
