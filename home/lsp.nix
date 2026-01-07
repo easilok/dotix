@@ -15,6 +15,7 @@
     vscode-langservers-extracted
     typescript
     gopls
+    yamlfmt
   ];
 }
 
