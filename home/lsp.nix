@@ -8,7 +8,7 @@
     lua-language-server
     pyright
     basedpyright
-    fennel
+    luaPackages.fennel
     fennel-ls
     fnlfmt
     typescript-language-server

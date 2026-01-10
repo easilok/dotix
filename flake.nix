@@ -1,9 +1,9 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-25.05";
+    home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -33,7 +33,7 @@
           ./hosts/cloud-nix/configuration.nix
           home-manager.nixosModules.home-manager
           {
-            # home-manager.useGlobalPkgs = true;
+            home-manager.useGlobalPkgs = true;
             # home-manager.useUserPackages = true;
 
             # TODO replace ryan with your own username
