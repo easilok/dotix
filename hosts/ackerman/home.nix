@@ -15,7 +15,12 @@
 
   home.packages = with pkgs; [
     devede
+    sbcl_2_4_10
   ];
+
+  home.sessionVariables = {
+    SBCL_HOME="/home/luis/.nix-profile/lib/sbcl";
+  };
 
   home.file.".Xmodmap" = {
     text = ''

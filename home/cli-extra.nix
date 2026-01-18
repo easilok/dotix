@@ -11,5 +11,6 @@
     restic
     rclone
     nextcloud-client
+    ffmpeg
   ];
 }
