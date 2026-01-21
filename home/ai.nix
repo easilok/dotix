@@ -5,5 +5,6 @@
     opencode
     claude-code
     codex
+    codex-acp
   ];
 }
