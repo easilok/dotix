@@ -10,7 +10,6 @@
     profanity
     restic
     rclone
-    nextcloud-client
     ffmpeg
   ];
 }

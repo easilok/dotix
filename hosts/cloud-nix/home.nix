@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   home.username = "luis";
   home.homeDirectory = "/home/luis";
 
@@ -11,6 +12,10 @@
     ../../home/development-extra.nix
     ../../home/containerization
     ../../home/gpg.nix
+  ];
+
+  home.packages = with pkgs; [
+    nextcloud-client
   ];
 
   # This value determines the home Manager release that your
