@@ -15,7 +15,7 @@
 
   home.packages = with pkgs; [
     devede
-    sbcl_2_4_10
+    sbcl
   ];
 
   home.sessionVariables = {

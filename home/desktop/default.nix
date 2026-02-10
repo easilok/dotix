@@ -13,6 +13,7 @@
     arc-theme
     pcmanfm
     libreoffice
+    hunspellDicts.pt-pt
     zathura
     evince
     speedcrunch

@@ -33,7 +33,10 @@
   networking.hostName = "ackerman";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    wifi.powersave = false;
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -53,6 +56,6 @@
   # networking.firewall.enable = false;
 
   services.udev.extraRules = ''
-      KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+    KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
   '';
 }

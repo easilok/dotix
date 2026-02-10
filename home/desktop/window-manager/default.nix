@@ -2,9 +2,9 @@
 {
   home.packages = with pkgs; [
     arandr
-    nm-tray
     picom
-    i3-gaps
+    networkmanagerapplet
+    i3
     stumpwm
   ];
 
