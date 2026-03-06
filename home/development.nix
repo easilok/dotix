@@ -18,6 +18,15 @@
     enableZshIntegration = config.programs.zsh.enable;
   };
 
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = config.programs.bash.enable;
+    enableZshIntegration = config.programs.zsh.enable;
+    nix-direnv.enable = true;
+  };
+
+  # services.lorri.enable = true;
+
   imports = [
     ./neovim.nix
     ./lsp.nix

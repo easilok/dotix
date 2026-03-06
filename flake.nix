@@ -9,14 +9,27 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       specialArgs = {
         username = "luis";
-        host-config = { username = "luis"; };
+        host-config = {
+          username = "luis";
+        };
 
-        inherit system inputs;
+        inherit system inputs pkgs-unstable;
       };
 
       # Used in standalone home manager
@@ -25,7 +38,8 @@
         config.allowUnfree = true;
       };
 
-    in {
+    in
+    {
 
       nixosConfigurations.cloud-nix = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
@@ -39,7 +53,7 @@
             # TODO replace ryan with your own username
             home-manager.users.luis = import ./hosts/cloud-nix/home.nix;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            home-manager.extraSpecialArgs = specialArgs;
           }
         ];
       };
@@ -82,14 +96,14 @@
       };
 
       homeConfigurations.luis-addvolt-dell = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+        inherit pkgs;
 
-          modules = [ ./hosts/luis-addvolt-dell/home.nix ];
+        modules = [ ./hosts/luis-addvolt-dell/home.nix ];
       };
       homeConfigurations.work-dell = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+        inherit pkgs;
 
-          modules = [ ./hosts/work-dell/home.nix ];
+        modules = [ ./hosts/work-dell/home.nix ];
       };
     };
 }
