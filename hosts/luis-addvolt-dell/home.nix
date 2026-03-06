@@ -9,6 +9,7 @@
     ../../home/shell/tools.nix
     ../../home/git.nix
     ../../home/development.nix
+    ../../home/development-foreign.nix
   ];
 
   home.packages = with pkgs; [ aider-chat-full gajim ];

@@ -12,12 +12,6 @@
     gh
   ];
 
-  programs.mise = {
-    enable = true;
-    enableBashIntegration = config.programs.bash.enable;
-    enableZshIntegration = config.programs.zsh.enable;
-  };
-
   programs.direnv = {
     enable = true;
     enableBashIntegration = config.programs.bash.enable;
