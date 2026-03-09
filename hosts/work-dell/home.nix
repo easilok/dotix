@@ -1,6 +1,18 @@
-{ config, pkgs, username, ... }: {
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
+{
   home.username = "luispereira";
   home.homeDirectory = "/home/luispereira";
+
+  # nixpkgs.config.allowUnfreePredicate = _: true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
+  };
 
   imports = [
     ../../home/base.nix
@@ -14,7 +26,8 @@
   ];
 
   home.packages = with pkgs; [
-      awscli2
+    awscli2
+    terraform
   ];
 
   # home.sessionVariables = {
