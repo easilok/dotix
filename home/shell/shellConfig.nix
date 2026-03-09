@@ -7,6 +7,8 @@
     "vi" = "vim";
     "vs" = "nvim +Sassy";
     "vob" = "nvim +ObsidianQuick";
+    "ee" =
+      ''emacsclient --eval "(raise-frame)" --eval "(+workspace/switch-to \"$(basename $PWD)\")" --eval "(dired \".\")"'';
     # info
     "battery" = "acpi -V | sed -n -e 1p -e 4p";
     "a" = "alias";
@@ -49,8 +51,8 @@
     "gd" = "git diff";
     "gco" = "git switch ";
     "gls" = "git ls";
-    "gg" = ''
-      git log --graph --full-history --date=relative --color --pretty=format:"%C(yellow)%h  %C(cyan)%ad %Cgreen[ %aN ] %Creset%s %C(bold yellow)%d" --graph'';
+    "gg" =
+      ''git log --graph --full-history --date=relative --color --pretty=format:"%C(yellow)%h  %C(cyan)%ad %Cgreen[ %aN ] %Creset%s %C(bold yellow)%d" --graph'';
     "glo" = "git log --pretty=oneline";
     "glol" = "git log --graph --oneline --decorate";
     "grs" = "git remote show";
