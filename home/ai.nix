@@ -6,5 +6,6 @@
     claude-code
     codex
     codex-acp
+    ollama
   ];
 }
