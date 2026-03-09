@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     rlwrap
-    sbcl
     taskwarrior3
     timewarrior
     timetagger_cli

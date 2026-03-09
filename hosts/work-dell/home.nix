@@ -17,6 +17,10 @@
       awscli2
   ];
 
+  # home.sessionVariables = {
+  #   SBCL_HOME="/home/luis/.nix-profile/lib/sbcl";
+  # };
+
   # programs.rofi = {
   #   enable = true;
   #   plugins = [ pkgs.rofi-emoji ];
@@ -36,4 +40,3 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
-
