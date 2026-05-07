@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   username,
   ...
 }:
@@ -25,9 +26,10 @@
     ../../home/ai.nix
   ];
 
-  home.packages = with pkgs; [
-    awscli2
-    terraform
+  home.packages = [
+    pkgs.awscli2
+    pkgs-unstable.terraform
+    pkgs-unstable.acli
   ];
 
   # home.sessionVariables = {

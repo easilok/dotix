@@ -3,9 +3,9 @@
 
   home.packages = with pkgs-unstable; [
     opencode
-    claude-code
-    codex
-    codex-acp
-    ollama
+    # claude-code
+    # codex
+    # codex-acp
+    # ollama
   ];
 }
