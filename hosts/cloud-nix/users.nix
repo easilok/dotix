@@ -4,7 +4,7 @@
     uinput = { };
   };
 
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
 
   users.users.luis = {
     isNormalUser = true;
@@ -18,7 +18,7 @@
       "input"
       "uinput"
     ];
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
   };
 
   # imports = [

@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./users.nix
     ../../nixos/common.nix
+    ../../nixos/guix.nix
   ];
 
   # Bootloader.
