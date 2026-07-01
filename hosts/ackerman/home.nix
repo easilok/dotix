@@ -6,7 +6,7 @@
   imports = [
     ../../home/base.nix
     ../../home/cli-extra.nix
-    ../../home/shell
+    # ../../home/shell
     ../../home/git.nix
     ../../home/development.nix
     ../../home/development-extra.nix
@@ -16,6 +16,7 @@
   home.packages = with pkgs; [
     devede
     sbcl
+    distrobox
   ];
 
   home.sessionVariables = {
@@ -43,5 +44,5 @@
   home.stateVersion = "25.11";
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  # programs.home-manager.enable = true;
 }

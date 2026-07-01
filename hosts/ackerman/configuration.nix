@@ -12,6 +12,7 @@
     ../../nixos/common.nix
     ../../nixos/desktop
     ../../nixos/virtualization
+    ../../nixos/guix.nix
   ];
 
   # Bootloader.
@@ -21,7 +22,7 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
-    default = 2;
+    default = 0;
   };
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";

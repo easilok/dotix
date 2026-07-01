@@ -4,6 +4,8 @@
     uinput = { };
   };
 
+  # programs.zsh.enable = true;
+
   users.users.luis = {
     isNormalUser = true;
     description = "Luis Pereira";
@@ -17,5 +19,7 @@
       "input"
       "uinput"
     ];
+    shell = "/home/luis/.guix-home/profile/bin/zsh";
+    # shell = pkgs.zsh;
   };
 }
