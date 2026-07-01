@@ -54,3 +54,12 @@ bindkey '\e[6~' end-of-history
 bindkey '\e[2~' redisplay
 # Custom bindings
 bindkey -s "^f" "tmux-smug\n"
+
+GUIX_PROFILE="$HOME/.config/guix/current"
+[[ -d "$GUIX_PROFILE" ]] && . "$GUIX_PROFILE/etc/profile"
+
+if [ -d "$HOME/.config/zsh/extensions" ]; then
+    for file in $HOME/.config/zsh/extensions/*.zsh; do
+        source "$file"
+    done
+fi

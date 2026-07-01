@@ -93,6 +93,11 @@
 
   };
 
+  extraConfig = ''
+    GUIX_PROFILE="$HOME/.config/guix/current"
+    [[ -d "$GUIX_PROFILE" ]] && . "$GUIX_PROFILE/etc/profile"
+  '';
+
   logoutExtra = ''
     if [ "$SHLVL" = 1 ]; then
         [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
