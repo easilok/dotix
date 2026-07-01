@@ -18,6 +18,7 @@
     evince
     speedcrunch
     wireguard-tools
+    libnotify # notify-send
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];
