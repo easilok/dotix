@@ -3,7 +3,7 @@
 
   home.packages = with pkgs; [
     nixd
-    nixfmt-rfc-style
+    nixfmt
     parinfer-rust
     lua-language-server
     pyright

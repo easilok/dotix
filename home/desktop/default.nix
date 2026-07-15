@@ -6,8 +6,8 @@
     flameshot
     haskellPackages.greenclip
     lxappearance
-    xorg.xev
-    xorg.xmodmap
+    xev
+    xmodmap
     nextcloud-client
     xarchiver
     arc-theme
