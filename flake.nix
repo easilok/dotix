@@ -84,6 +84,20 @@
         ];
       };
 
+      nixosConfigurations.trafalgar = nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
+        modules = [
+          ./hosts/trafalgar/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = specialArgs;
+            home-manager.useGlobalPkgs = true;
+            home-manager.users.luis = import ./hosts/trafalgar/home.nix;
+            home-manager.backupFileExtension = ".nix-bak";
+          }
+        ];
+      };
+
       nixosConfigurations.usopp = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
         modules = [
