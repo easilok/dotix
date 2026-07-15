@@ -12,6 +12,7 @@
     ../../nixos/common.nix
     ../../nixos/desktop
     ../../nixos/virtualization
+    ../../nixos/containerization
     ../../nixos/guix.nix
   ];
 

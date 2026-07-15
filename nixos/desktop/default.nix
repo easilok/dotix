@@ -39,8 +39,6 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-  virtualisation.docker.enable = true;
-
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
