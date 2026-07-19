@@ -19,6 +19,7 @@
     htop
     tmux # required for allowing using my own config
     lf
+    yazi
     inetutils
   ];
 
