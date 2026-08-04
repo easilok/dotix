@@ -6,6 +6,11 @@
     networkmanagerapplet
     i3
     stumpwm
+    numlockx
+    wmname
+    dunst
+    xss-lock
+    blueman
   ];
 
   xsession.windowManager = {

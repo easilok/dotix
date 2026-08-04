@@ -1,5 +1,12 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ brightnessctl ];
+  environment.systemPackages = with pkgs; [
+    brightnessctl
+    networkmanagerapplet
+  ];
+
+  services.blueman = {
+    enable = true;
+  };
 }
