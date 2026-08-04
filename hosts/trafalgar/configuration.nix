@@ -2,11 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, nixos-hardware, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    nixos-hardware.nixosModules.dell-latitude-7420
     ./users.nix
     ../common/thinkpad-t420
     ../../nixos/common.nix
