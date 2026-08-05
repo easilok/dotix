@@ -5,6 +5,7 @@
     picom
     networkmanagerapplet
     i3
+    i3lock-color
     stumpwm
     numlockx
     wmname
