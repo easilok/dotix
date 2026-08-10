@@ -7,9 +7,9 @@
 {
   imports = [
     ./hardware-configuration.nix
-    nixos-hardware.nixosModules.dell-latitude-7420
+    # nixos-hardware.nixosModules.dell-latitude-7420
     ./users.nix
-    ../common/thinkpad-t420
+    ../../nixos/hardware/latitude-7420
     ../../nixos/common.nix
     ../../nixos/desktop
     ../../nixos/laptop
