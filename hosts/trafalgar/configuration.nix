@@ -24,7 +24,8 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.luks.devices."luks-b0df3d72-e916-4c3b-bb66-ade24c788751".device = "/dev/disk/by-uuid/b0df3d72-e916-4c3b-bb66-ade24c788751";
+  boot.initrd.luks.devices."luks-b0df3d72-e916-4c3b-bb66-ade24c788751".device =
+    "/dev/disk/by-uuid/b0df3d72-e916-4c3b-bb66-ade24c788751";
   networking.hostName = "trafalgar";
 
   # Enable networking
@@ -42,7 +43,17 @@
   };
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    ports = [ 7227 ];
+    # openFirewall = false; # Use custom firewall rules
+    settings = {
+      LogLevel = "VERBOSE";
+      PermitRootLogin = "no";
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = true;
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -53,4 +64,7 @@
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
   '';
+
+  # Power management
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 }

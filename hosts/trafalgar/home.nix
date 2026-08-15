@@ -28,6 +28,7 @@
     text = ''
       clear lock
       keycode  66 = Escape Escape Escape Escape
+      keycode  21 = less greater less greater guillemotleft guillemotright guillemotleft
     '';
   };
 
