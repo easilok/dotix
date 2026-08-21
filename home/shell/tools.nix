@@ -16,7 +16,6 @@
     enableBashIntegration = false;
     enableZshIntegration = config.programs.zsh.enable;
     settings = {
-      aws = { disabled = true; };
       package = { disabled = true; };
       character = { vimcmd_symbol = "[❮](bold yellow)"; };
       custom.production_env = {

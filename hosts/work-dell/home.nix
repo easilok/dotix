@@ -28,6 +28,7 @@
 
   home.packages = [
     pkgs.awscli2
+    pkgs.ssm-session-manager-plugin
     pkgs-unstable.terraform
     pkgs-unstable.acli
   ];
