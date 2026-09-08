@@ -18,6 +18,7 @@
       "input"
       "uinput"
     ];
+    shell = "/home/luis/.guix-home/profile/bin/zsh";
     # shell = pkgs.zsh;
   };
 

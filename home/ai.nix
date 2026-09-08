@@ -7,5 +7,7 @@
     # codex
     # codex-acp
     # ollama
+  ] ++ [
+    pkgs.graphifyy
   ];
 }

@@ -40,14 +40,26 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        overlays = [ self.overlays.default ];
       };
 
     in
     {
 
+      overlays.default = final: prev: {
+        graphifyy = final.callPackage ./pkgs/graphifyy { };
+      };
+
+      packages.x86_64-linux.graphifyy = (import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ self.overlays.default ];
+      }).graphifyy;
+
       nixosConfigurations.cloud-nix = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
         modules = [
+          { nixpkgs.overlays = [ self.overlays.default ]; }
           ./hosts/cloud-nix/configuration.nix
           home-manager.nixosModules.home-manager
           {
@@ -65,6 +77,7 @@
       nixosConfigurations.vm-nix = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
         modules = [
+          { nixpkgs.overlays = [ self.overlays.default ]; }
           ./hosts/vm-nix/configuration.nix
           home-manager.nixosModules.home-manager
           {
@@ -77,6 +90,7 @@
       nixosConfigurations.ackerman = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
         modules = [
+          { nixpkgs.overlays = [ self.overlays.default ]; }
           ./hosts/ackerman/configuration.nix
           home-manager.nixosModules.home-manager
           {
@@ -105,6 +119,7 @@
       nixosConfigurations.usopp = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
         modules = [
+          { nixpkgs.overlays = [ self.overlays.default ]; }
           ./hosts/usopp/configuration.nix
           home-manager.nixosModules.home-manager
           {
