@@ -54,4 +54,6 @@
     config.common.default = "gtk";
   };
 
+  programs.niri.enable = true;
+
 }
