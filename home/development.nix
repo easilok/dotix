@@ -9,6 +9,7 @@
     go
     smug
     gh
+    d2
   ];
 
   programs.direnv = {
