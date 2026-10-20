@@ -14,6 +14,9 @@
     blueman
     swaybg # wallpaper
     xwayland-satellite # xwayland support
+    wl-clipboard
+    cliphist
+    kanshi
   ];
 
   programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
@@ -125,5 +128,15 @@
       #Xft/DPI 105000 ;
     };
   };
+
+  dconf.settings = {
+  "org/gnome/desktop/interface" = {
+    gtk-theme = "Arc-Dark";
+    icon-theme = "adwaita-xfce";
+    font-name = "Ubuntu Regular 10";
+    monospace-font-name = "Source Code Pro 10";
+    color-scheme = "prefer-dark";
+  };
+};
 
 }

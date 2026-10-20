@@ -54,6 +54,12 @@
     config.common.default = "gtk";
   };
 
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+    useNautilus =  false;
+  };
+  programs.waybar.enable = true; # launch on startup in the default setting (bar)
+  systemd.user.services.niri.unitConfig.Wants = [ "waybar.service" ];
+  programs.dconf.enable = true;
 
 }

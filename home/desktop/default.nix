@@ -19,6 +19,7 @@
     speedcrunch
     wireguard-tools
     libnotify # notify-send
+    gparted
   ];
 
   imports = [ ./fonts.nix ./rofi.nix ./window-manager ./multimedia.nix];

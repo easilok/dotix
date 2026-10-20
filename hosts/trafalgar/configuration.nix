@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, nixos-hardware, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   imports = [
@@ -46,7 +51,7 @@
   services.openssh = {
     enable = true;
     ports = [ 7227 ];
-    # openFirewall = false; # Use custom firewall rules
+    openFirewall = false; # Use custom firewall rules
     settings = {
       LogLevel = "VERBOSE";
       PermitRootLogin = "no";
@@ -60,6 +65,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  networking.firewall.extraCommands =''
+         iptables -A INPUT -s 192.168.1.0/24 -p tcp --dport 7227 -j ACCEPT
+  '';
 
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
