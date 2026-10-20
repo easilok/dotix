@@ -10,6 +10,11 @@
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -18,6 +23,7 @@
       nixpkgs,
       nixpkgs-unstable,
       nixos-hardware,
+      emacs-overlay,
       home-manager,
       ...
     }@inputs:
@@ -33,7 +39,13 @@
           username = "luis";
         };
 
-        inherit system inputs pkgs-unstable nixos-hardware;
+        inherit
+          system
+          inputs
+          pkgs-unstable
+          nixos-hardware
+          emacs-overlay
+          ;
       };
 
       # Used in standalone home manager
@@ -105,6 +117,7 @@
       nixosConfigurations.trafalgar = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
         modules = [
+          { nixpkgs.overlays = [ self.overlays.default ]; }
           ./hosts/trafalgar/configuration.nix
           home-manager.nixosModules.home-manager
           {

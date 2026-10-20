@@ -1,13 +1,22 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  system,
+  emacs-overlay,
+  ...
+}:
 
-  home.packages = with pkgs; [
+let
+  emacs = (pkgs.emacsPackagesFor emacs-overlay.packages.${system}.emacs-unstable-pgtk).withPackages (epkgs: [
+    epkgs.mu4e
+  ]);
+in
+{
+  home.packages = [
     emacs
-    texinfo
-    cmake
-    libtool
-    ispell
-    emacsPackages.mu4e
+    pkgs.texinfo
+    pkgs.cmake
+    pkgs.libtool
+    pkgs.ispell
   ];
 }
-
