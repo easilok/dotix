@@ -60,6 +60,7 @@
 
       overlays.default = final: prev: {
         graphifyy = final.callPackage ./pkgs/graphifyy { };
+        pi-acp = final.callPackage ./pkgs/pi-acp {};
       };
 
       packages.x86_64-linux.graphifyy = (import nixpkgs {
@@ -67,6 +68,12 @@
         config.allowUnfree = true;
         overlays = [ self.overlays.default ];
       }).graphifyy;
+
+      packages.x86_64-linux.pi-acp = (import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ self.overlays.default ];
+      }).pi-acp;
 
       nixosConfigurations.cloud-nix = nixpkgs.lib.nixosSystem {
         inherit system specialArgs;

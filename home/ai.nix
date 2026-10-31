@@ -10,5 +10,6 @@
     # ollama
   ] ++ [
     pkgs.graphifyy
+    pkgs.pi-acp
   ];
 }
