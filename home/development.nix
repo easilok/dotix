@@ -2,14 +2,15 @@
 {
   home.packages = with pkgs; [
     rlwrap
-    taskwarrior3
-    timewarrior
-    timetagger_cli
+    # taskwarrior3 # conflicts with go-task
+    # timewarrior
+    # timetagger_cli
     kanata
     go
     smug
     gh
     d2
+    go-task
   ];
 
   programs.direnv = {
