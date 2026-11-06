@@ -13,7 +13,7 @@
 
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -58,10 +58,12 @@
     in
     {
 
-      overlays.default = final: prev: {
-        graphifyy = final.callPackage ./pkgs/graphifyy { };
-        pi-acp = final.callPackage ./pkgs/pi-acp {};
-      };
+      overlays.default = nixpkgs.lib.composeExtensions emacs-overlay.overlays.default (
+        final: prev: {
+          graphifyy = final.callPackage ./pkgs/graphifyy { };
+          pi-acp = final.callPackage ./pkgs/pi-acp { };
+        }
+      );
 
       packages.x86_64-linux.graphifyy = (import nixpkgs {
         inherit system;

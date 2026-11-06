@@ -1,13 +1,12 @@
 {
   config,
   pkgs,
-  system,
-  emacs-overlay,
   ...
 }:
 
 let
-  emacs = (pkgs.emacsPackagesFor emacs-overlay.packages.${system}.emacs-unstable-pgtk).withPackages (epkgs: [
+  # Emacs comes from nix-community/emacs-overlay (merged in flake overlays.default)
+  emacs = (pkgs.emacsPackagesFor pkgs.emacs-unstable-pgtk).withPackages (epkgs: [
     epkgs.mu4e
   ]);
 in

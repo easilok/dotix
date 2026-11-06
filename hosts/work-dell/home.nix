@@ -22,6 +22,7 @@
     ../../home/shell/tools.nix
     ../../home/git.nix
     ../../home/development.nix
+    ../../home/development-extra.nix
     ../../home/development-foreign.nix
     ../../home/ai.nix
   ];
