@@ -21,6 +21,7 @@
     lf
     yazi
     inetutils
+    curl
   ];
 
   # TODO: Move to tmux configuration
