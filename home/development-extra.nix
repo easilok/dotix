@@ -3,5 +3,8 @@
 
   imports = [ ./emacs.nix ];
 
+  home.packages = with pkgs; [
+    ghostty
+  ];
 }
 
