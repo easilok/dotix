@@ -55,6 +55,13 @@ bindkey '\e[2~' redisplay
 # Custom bindings
 bindkey -s "^f" "tmux-smug\n"
 
+# Edit the current command in $EDITOR
+autoload -Uz edit-command-line
+zle -N edit-command-line
+
+bindkey -M viins '^X^E' edit-command-line
+bindkey -M vicmd 'vv' edit-command-line
+
 GUIX_PROFILE="$HOME/.config/guix/current"
 [[ -d "$GUIX_PROFILE" ]] && . "$GUIX_PROFILE/etc/profile"
 
